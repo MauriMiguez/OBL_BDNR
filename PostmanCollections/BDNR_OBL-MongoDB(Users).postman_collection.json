@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "035c47fe-81b9-4c7d-9453-abac7727485a",
+		"name": "BDNR_OBL:MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmdhbml6YXRpb24iOiJPUlQiLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJwcml2aWxlZ2VzIjoiRXh0ZXJuYWxTeXN0ZW0iLCJpYXQiOjE2MDc3NTg4NDJ9.jl3-kZWM9hn-AOhuW5WrrGD0480z7_gevnvpRXeC2jU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"mauri.miguez@hotmail.com\",\r\n    \"username\" : \"mauri\",\r\n    \"gender\" : \"male\",\r\n    \"biography\" : \"a biography\",\r\n    \"accountType\" : \"an accountType\",\r\n    \"birthdate\" : \"09/04/1999\" ,\r\n    \"location\" : \"a location\",\r\n    \"height\" : 165,\r\n    \"weight\" : 60,\r\n    \"privacy\" : \"private\",\r\n    \"equipment\" : \"championes\",\r\n    \"notification\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/mauri.miguez@hotmail.com",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/mauri.miguez@hotmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"mauri.miguez@hotmail.com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "4b2977ee-c759-486e-b72e-8cd5bd07a20b",
+		"name": "BDNR_OBL:Cassandra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"facupm\",\r\n    \"date\": \"2017-06-06\",\r\n    \"title\": \"La salida de facu\",\r\n    \"url\": \"C:/fotos/sinfoto\",\r\n    \"comment\": \"Sali a correr solo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/photoActivities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"photoActivities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"facupm\",\r\n    \"date\": \"2017-05-06\",\r\n    \"title\": \"La salida de Facu\",\r\n    \"text\": \"Salia a correr con los pibes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/postActivities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"postActivities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Manual Physical",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"facupm\",\r\n    \"date\": \"2015-07-06\",\r\n    \"title\": \"La salida de Facu\",\r\n    \"type\": \"Correr\",\r\n    \"duration\": 20,\r\n    \"distance\": 1,\r\n    \"photo\": \"C:/Photos/correr.jpg\",\r\n    \"description\": \"Salia a correr con los pibes\",\r\n    \"effort\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/manualPhysicalActivities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"manualPhysicalActivities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Automatic Physical",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"facupm\",\r\n    \"date\": \"2018-05-05\",\r\n    \"title\": \"La salida de Facu\",\r\n    \"type\": \"Correr\",\r\n    \"duration\": 20,\r\n    \"distance\": 1,\r\n    \"location\": \"Carrasco\",\r\n    \"average_speed\": 2,\r\n    \"cadence\": 10,\r\n    \"calories\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/automaticPhysicalActivities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"automaticPhysicalActivities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Activities by User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/api/activities?user=facupm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"activities"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "facupm"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
